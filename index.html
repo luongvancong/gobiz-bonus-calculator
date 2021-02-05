@@ -84,6 +84,16 @@
                         <i class="fas fa-eye-slash icon-eye icon-eye-toggle absolute"></i>
                     </div>
                     <div class="form-group relative">
+                        <label class="text">Tổng thưởng trước tết(70%):</label>
+                        <input id="totalBeforeLunarNewYear" class="form-control" type="password" readonly />
+                        <i class="fas fa-eye-slash icon-eye icon-eye-toggle absolute"></i>
+                    </div>
+                    <div class="form-group relative">
+                        <label class="text">Tổng thưởng sau tết(30%):</label>
+                        <input id="totalAfterLunarNewYear" class="form-control" type="password" readonly />
+                        <i class="fas fa-eye-slash icon-eye icon-eye-toggle absolute"></i>
+                    </div>
+                    <div class="form-group relative">
                         <label class="text">Tổng thưởng:</label>
                         <input id="total" class="form-control" type="password" readonly />
                         <i class="fas fa-eye-slash icon-eye icon-eye-toggle absolute"></i>
@@ -122,6 +132,8 @@
                 const $result = $('#result');
                 const $t13 = $('#t13');
                 const $total = $('#total');
+                const $totalBeforeLunarNewYear = $('#totalBeforeLunarNewYear');
+                const $totalAfterLunarNewYear = $('#totalAfterLunarNewYear');
 
                 const endDateOfYear = "2020-12-31";
 
@@ -138,6 +150,10 @@
 
                 $result.val(numeral(bonus).format('0,0'));
                 $t13.val(numeral(salary13).format('0,0'));
+
+                $totalBeforeLunarNewYear.val(numeral(total * 0.7).format('0,0'));
+                $totalAfterLunarNewYear.val(numeral(total * 0.3).format('0,0'));
+
                 $total.val(numeral(total).format('0,0'));
             });
 
