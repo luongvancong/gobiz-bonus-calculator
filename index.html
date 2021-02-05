@@ -140,7 +140,6 @@
                 const totalWorkDay = moment(endDateOfYear).diff($workStartDay.val(), 'days');
 
                 const roundWorkYear = totalWorkDay/365 >= 1 ? 1 : totalWorkDay/365;
-                console.log(totalWorkDay/365, roundWorkYear);
 
                 let salary13 = $salary.val() * roundWorkYear;
 
